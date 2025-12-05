@@ -1,0 +1,151 @@
+# sphinx build directories
+_build/
+
+# dotfiles
+.*
+!.gitignore
+!.gitkeep
+!.github
+!.mailmap
+!.weblate.json
+# compiled python files
+*.py[co]
+__pycache__/
+# setup.py egg_info
+*.egg-info
+# emacs backup files
+*~
+# hg stuff
+*.orig
+status
+# odoo filestore
+odoo/filestore
+# maintenance migration scripts
+odoo/addons/base/maintenance
+# windows installation config file
+/odoo.conf
+
+# generated for windows installer?
+install/win32/*.bat
+install/win32/meta.py
+
+# addons
+debian
+doc
+# needed only when building for win32
+setup
+setup/win32/static/less/
+setup/win32/static/wkhtmltopdf/
+setup/win32/static/postgresql*.exe
+
+odoo
+# js tooling
+node_modules
+jsconfig.json
+tsconfig.json
+package-lock.json
+package.json
+.husky
+
+# various virtualenv
+/bin/
+/build/
+/dist/
+/include/
+/lib/
+/man/
+/share/
+/src/
+
+# Python virtual environments and caches
+.venv/
+venv/
+ENV/
+env/
+pip-wheel-metadata/
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Odoo runtime files
+*.db
+*.sqlite3
+*.dump
+*.log
+*.pid
+odoo.log
+# Filestore (local development)
+filestore/
+data/filestore/
+
+# Docker and environment files
+.env
+.env.*
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Node / JS tooling
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Build and coverage
+build/
+dist/
+static/build/
+coverage/
+.coverage
+htmlcov/
+
+# Key/cert files
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+*.pfx
+
+# Misc
+*.orig
+*.bak
+*~
+
+# Additional large/temp directories to avoid pushing heavy data
+# Docker volumes and runtime data
+/var/lib/odoo/
+/var/lib/postgresql/
+pgdata/
+postgres_data/
+
+# Local user caches and odoo filestore
+.local/
+.local/share/Odoo/
+
+# Temporary and build artifacts
+tmp/
+temp/
+
+# Python type/checker caches
+.mypy_cache/
+
+# Editor swapfiles
+*.swp
+
+
+# Ignore all addons content except `addons/new_module`
+# This prevents large third-party addon folders from being pushed.
+# Keep the `addons` directory but ignore everything inside it,
+# then re-allow the single addon we want to keep tracked.
+/addons/*
+!/addons/new_module/
+!/addons/new_module/**
+

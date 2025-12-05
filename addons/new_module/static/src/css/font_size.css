@@ -1,0 +1,22 @@
+/* Increase font sizes in targeted selectors by ~10px.
+   This avoids globally overriding all elements which can break layouts.
+   Adjust selectors below if you want backend-only or frontend-only. */
+
+/* Base increase for main page containers (backend and frontend) */
+body, .o_web_client, .o_main, .o_form_sheet, .o_list_view {
+  font-size: calc(1rem + 10px) !important;
+}
+
+/* Headings get a larger proportional increase */
+h1 { font-size: calc(2rem + 10px) !important; }
+h2 { font-size: calc(1.5rem + 10px) !important; }
+h3 { font-size: calc(1.25rem + 10px) !important; }
+
+/* Ensure form labels and widgets inherit the new base size (keeps controls readable)
+   and keep inputs / textareas / selects matching the surrounding text */
+label, .o_field_label, .o_form_label { font-size: inherit !important; }
+input, textarea, select, button, .o_field_widget { font-size: inherit !important; }
+
+/* Narrow scope: avoid changing icons and very small UI widgets */
+.o_icon, .badge, .o_button_icon { font-size: initial !important; }
+
